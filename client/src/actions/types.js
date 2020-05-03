@@ -1,0 +1,4 @@
+export const SET_USERNAME = "SET_USERNAME";
+export const SET_USERID = "SET_USERID";
+export const UPDATE_USER_LIST = "UPDATE_USER_LIST";
+export const UPDATE_MESSAGE_LIST = "UPDATE_MESSAGE_LIST";

@@ -1,0 +1,134 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Roboto Mono", monospace;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: url(../assets/images/confetti.png) no-repeat center center fixed;
+  box-sizing: border-box;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  color: white;
+}
+
+.login-form {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  color: white;
+}
+
+.apply-button {
+  animation: fade-in ease-in-out 0.3s, pulse 2s infinite;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition: 0.3s;
+  z-index: 2;
+  text-align: center;
+}
+
+.apply-button:hover {
+  background-color: #868e96;
+}
+
+.apply-button:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.name-input {
+  animation: fade-in ease-in-out 0.3s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #868e96;
+  }
+
+  70% {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.fade-out {
+  animation: fade-out ease-in-out 0.3s !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.3);
+}
