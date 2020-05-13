@@ -1,4 +1,5 @@
 # FChatBot
-chat bot task 
+Group chat with chatbot that answers FAQ.
+Using elastic search, react, redux, nodejs, socket.io
 ----
-npm run dev
+
