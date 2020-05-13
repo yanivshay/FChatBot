@@ -3,21 +3,15 @@
 *:after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
 }
 
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   background: url(../assets/images/confetti.png) no-repeat center center fixed;
   box-sizing: border-box;
   -webkit-background-size: cover;
@@ -25,10 +19,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.808);
+  height: 100vh;
 }
 
 .main-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,17 +31,19 @@ body {
 
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: calc(2rem + 2vw);
   letter-spacing: 1px;
-  margin-top: 2rem;
+  margin: 2rem 0;
   color: white;
 }
 
 .login-form {
-  margin-top: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  width: 300px;
   color: white;
 }
 
@@ -58,7 +54,7 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  font-size: 1.2rem;
+  font-size: calc(1rem + 1vw);
   font-weight: bolder;
   transition: 0.3s;
   z-index: 2;
@@ -75,6 +71,7 @@ body {
 
 .name-input {
   animation: fade-in ease-in-out 0.3s;
+  font-size: calc(1rem + 1vw) !important;
 }
 
 @keyframes fade-in {
@@ -131,4 +128,17 @@ body {
 
 ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 610px) {
+  .users {
+    height: 10%;
+  }
+  .chat-section {
+    height: 90%;
+  }
+  .title {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
 }

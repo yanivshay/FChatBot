@@ -3,11 +3,14 @@
 }
 
 .messages-list {
-  padding: 1%;
+  margin: 1rem 1.5rem;
 }
 
 .system-message {
+  font-size: calc(0.8rem + 1vw);
   margin: 0.5rem;
+  color: white;
+  text-align: center;
 }
 
 .message-ans-btn {
@@ -16,8 +19,8 @@
   padding: 1px 8px 1px 8px;
   border-radius: 15px;
   float: right;
+  font-size: calc(0.2rem + 1vw);
   margin-bottom: 5px;
-  font-size: 0.7rem;
   color: #999;
 
   background: linear-gradient(to right, #40a852 50%, white 50%);
@@ -36,9 +39,10 @@
   background: #333;
   float: right;
   text-align: right;
+  border-radius: 10px 10px 0 15px;
 }
 
-.chat-item-me ::before {
+/* .chat-item-me ::before {
   left: 100%;
   border: solid transparent;
   border-left-color: #333;
@@ -49,16 +53,17 @@
   pointer-events: none;
   border-width: 10px;
   top: 10px;
-}
+} */
 
 .chat-item-other {
   margin-bottom: 0.5rem;
   background: #f1f2f2;
   float: left;
   text-align: left;
+  border-radius: 10px 10px 15px 0;
 }
 
-.chat-item-other ::after {
+/* .chat-item-other ::after {
   right: 100%;
   border: solid transparent;
   border-right-color: #f1f2f2;
@@ -69,7 +74,7 @@
   pointer-events: none;
   border-width: 10px;
   top: 10px;
-}
+} */
 
 .message {
   padding: 0.5rem;
@@ -77,29 +82,30 @@
 }
 
 .message-user-name {
-  font-size: 0.8rem;
+  font-size: calc(0.3rem + 1vw);
   font-weight: bold;
   color: #40a852;
   padding-right: 1.5rem;
 }
 
 .message-time {
-  font-size: 0.7rem;
+  font-size: calc(0.2rem + 1vw);
   color: #999;
 }
 
 .message-text {
-  font-size: 0.9rem;
+  font-size: calc(0.4rem + 1vw);
   color: #777777;
   max-width: 200px;
   word-wrap: break-word;
 }
 
 .ans-p {
-  font-size: 0.7rem;
+  font-size: calc(0.2rem + 1vw);
   color: rgb(197, 118, 87);
   padding: 2px 5px;
   background: #5050503d;
   max-width: 200px;
   word-wrap: break-word;
+  border-radius: 20px;
 }

@@ -53,9 +53,9 @@ const InputBox = ({ socket, uid, username, getReplyMsg }) => {
         ref={(el) => (msgField = el)}
         onKeyPress={handleKeyPress}
       ></textarea>
-      <a class="chat-controls-btn send" onClick={handleMessages}>
-        <span class="material-icons">send</span>
-      </a>
+      <span class="material-icons controls-send" onClick={handleMessages}>
+        send
+      </span>
     </div>
   );
 };

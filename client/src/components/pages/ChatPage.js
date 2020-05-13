@@ -34,11 +34,13 @@ const ChatPage = (props) => {
         {`Online Users: ${Object.keys(userlist).length}`}
         <UsersList userlist={userlist} />
       </div>
-      <div class="messages box">
-        <MessagesBox {...props} replyQuestion={replyQuestion} />
-      </div>
-      <div class="input">
-        <InputBox {...props} getReplyMsg={getReplyMsg} />
+      <div className="chat-section">
+        <div class="messages">
+          <MessagesBox {...props} replyQuestion={replyQuestion} />
+        </div>
+        <div class="input">
+          <InputBox {...props} getReplyMsg={getReplyMsg} />
+        </div>
       </div>
     </div>
   );
