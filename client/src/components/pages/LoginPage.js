@@ -20,17 +20,27 @@ const LoginPage = ({ actions, socket }) => {
   };
 
   return (
-    <div className="login-form">
-      <input
-        className="name-input"
-        type="text"
-        placeholder="Type your name"
-        ref={(el) => (usernameField = el)}
-        onKeyPress={handleKeyPress}
-      />
-      <button className="apply-button" onClick={handleLogin}>
-        Enter
-      </button>
+    <div className="login-page">
+      <div className="title">Q&A Group Chat</div>
+      <div className="login-text">
+        <h3>This is awsome group chat with incredible smart chat bot</h3>
+        <h4>
+          Ask whatever is on your mind and get answer from your group friends or
+          from the incredible bot
+        </h4>
+      </div>
+      <div className="login-form">
+        <input
+          className="name-input"
+          type="text"
+          placeholder="Type your name"
+          ref={(el) => (usernameField = el)}
+          onKeyPress={handleKeyPress}
+        />
+        <button className="apply-button" onClick={handleLogin}>
+          Enter
+        </button>
+      </div>
     </div>
   );
 };

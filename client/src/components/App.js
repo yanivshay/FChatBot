@@ -16,7 +16,6 @@ import "../styles/App.css";
 
 const App = (props) => (
   <div className="main-container">
-    <div className="title">Q&A Group Chat</div>
     {props.username ? <ChatPage {...props} /> : <LoginPage {...props} />}
   </div>
 );
