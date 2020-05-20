@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
 }
 
 html {
@@ -12,43 +11,96 @@ html {
 }
 
 body {
-  background: url(../assets/images/confetti.png) no-repeat center center fixed;
-  box-sizing: border-box;
+  background: url(../assets/images/confetti.png) no-repeat center center fixed
+    rgb(0, 0, 0);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.808);
-  height: 100vh;
+  font-family: "Roboto Mono", monospace;
 }
 
-.main-container {
+.login-page {
+}
+
+.title {
+  animation: fadeInRight 1s ease forwards;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  text-align: center;
+  font-size: calc(6rem + 2vw);
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 2rem;
+  color: #691eff59;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.199);
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.title {
-  text-align: center;
-  font-size: calc(2rem + 2vw);
-  letter-spacing: 1px;
-  margin: 2rem 0;
-  color: white;
-}
-
-.login-form {
   position: absolute;
-  top: 50%;
+  width: 40vw;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
+}
+
+.login-text {
+  animation: fadeInLeft 1s ease forwards;
+  position: fixed;
+  top: 17%;
+  left: 15%;
+  width: 60%;
+  margin: 2rem;
   color: white;
+}
+
+.login-text,
+h3 {
+  font-size: calc(1.5rem + 2vw);
+  letter-spacing: 1px;
+  line-height: inherit;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-text h4 {
+  font-size: calc(0.5rem + 2vw);
+  line-height: inherit;
+  font-family: "Poppins", sans-serif;
 }
 
 .apply-button {
-  animation: fade-in ease-in-out 0.3s, pulse 2s infinite;
+  animation: fade-in ease-in-out 1s, pulse 2s infinite;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   padding: 10px 20px;
@@ -59,6 +111,7 @@ body {
   transition: 0.3s;
   z-index: 2;
   text-align: center;
+  width: 100%;
 }
 
 .apply-button:hover {
@@ -70,8 +123,9 @@ body {
 }
 
 .name-input {
-  animation: fade-in ease-in-out 0.3s;
+  animation: fade-in ease-in-out 1s;
   font-size: calc(1rem + 1vw) !important;
+  color: white;
 }
 
 @keyframes fade-in {
@@ -109,7 +163,7 @@ body {
 }
 
 .fade-out {
-  animation: fade-out ease-in-out 0.3s !important;
+  animation: fade-out ease-in-out 2s !important;
 }
 
 ::-webkit-scrollbar {
@@ -131,14 +185,36 @@ body {
 }
 
 @media (max-width: 610px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
   .users {
     height: 10%;
   }
   .chat-section {
     height: 90%;
   }
-  .title {
-    font-size: 2rem;
-    margin: 0.5rem;
+  .login-form {
+    top: 70%;
+  }
+  .online-users {
+    writing-mode: horizontal-tb;
+    font-size: calc(3rem + 2vw);
+    text-align: center;
+  }
+  .users-list {
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+  }
+  .message-text {
+    font-size: calc(1rem + 2vw);
+  }
+  .message-time {
+    font-size: calc(0.5rem + 2vw);
+  }
+  .message-user-name {
+    font-size: calc(0.6rem + 2vw);
   }
 }

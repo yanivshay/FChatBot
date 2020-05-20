@@ -13,11 +13,26 @@ const UsersList = ({ userlist }) => {
     const username = userlist[uid];
 
     list.push(
-      <li className="user" key={uid}>
-        {username === "ForteroBOT" ? (
-          <Chip avatar={<Avatar src={botImage}></Avatar>} label={username} />
+      <li key={uid}>
+        {/* {username === "ForteroBOT" ? (
+          <Chip
+            style={{ fontSize: "calc(0.5rem + 2vw)" }}
+            avatar={<Avatar src={botImage}></Avatar>}
+            label={username}
+          />
         ) : (
-          <Chip avatar={<Avatar></Avatar>} label={username} />
+          <Chip className="user" avatar={<Avatar></Avatar>} label={username} />
+        )} */}
+        {username === "ForteroBOT" ? (
+          <div className="user">
+            <img src={botImage} className="user-img" />
+            <label className="user-label">{username}</label>
+          </div>
+        ) : (
+          <div className="user">
+            <img src={botImage} className="user-img" />
+            <label className="user-label">{username}</label>
+          </div>
         )}
       </li>
     );

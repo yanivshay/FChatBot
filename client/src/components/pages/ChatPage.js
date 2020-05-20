@@ -31,7 +31,9 @@ const ChatPage = (props) => {
   return (
     <div class="app-layout">
       <div class="users">
-        {`Online Users: ${Object.keys(userlist).length}`}
+        <h1 className="online-users">{`Online Users: ${
+          Object.keys(userlist).length
+        }`}</h1>
         <UsersList userlist={userlist} />
       </div>
       <div className="chat-section">

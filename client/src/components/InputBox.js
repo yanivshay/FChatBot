@@ -48,7 +48,8 @@ const InputBox = ({ socket, uid, username, getReplyMsg }) => {
       <textarea
         id="user-input"
         class="chat-controls-textarea"
-        rows="1"
+        rows="2"
+        cols="10"
         placeholder="What is on you'r mind?"
         ref={(el) => (msgField = el)}
         onKeyPress={handleKeyPress}

@@ -1,8 +1,12 @@
 .app-layout {
   display: flex;
   flex-wrap: wrap;
-  height: 80vh;
-  width: 90vw;
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .users {
@@ -13,19 +17,16 @@
 
 .chat-section {
   flex: 10 1 40rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .messages {
   overflow-y: auto;
-  background-color: #ffffff63;
+  background-color: #ffffff17;
   height: 88%;
   overflow-x: hidden;
-}
-
-.input {
-  grid-column: 2;
-  grid-row: 2;
-  background: #ffffff63;
+  flex: 2 0 40rem;
 }
 
 .users-list {
@@ -35,5 +36,33 @@
 }
 
 .user {
-  margin: 0.5rem;
+  margin: 0.5rem 1rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.user-img {
+  border-radius: 10px;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
+}
+
+.user-label {
+  color: white;
+  font-size: calc(0.7rem + 1vw);
+}
+
+.online-users {
+  writing-mode: vertical-lr;
+  position: absolute;
+  font-size: calc(4rem + 3vw);
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 2rem;
+  color: #691eff1e;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.199);
+  font-family: "Poppins", sans-serif;
+  z-index: -1;
 }
